@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+  {% block content %}
+
+    {% if error %}
+
+    {{ error }}
+
+    {% endif %}
+
+    <h1>Create Product</h1>
+
+    <form method="POST" class="post-form">
+      {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Create</button>
+        </form>
+{% endblock %}

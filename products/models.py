@@ -9,6 +9,7 @@ class Product(models.Model):
     description=models.TextField()
     cost= models.DecimalField(default=0.00, max_digits=10, decimal_places=2)
     pub_date=models.DateTimeField(null=True)
+    votes=models.IntegerField(default=0)
 
     user=models.ForeignKey(CustomUser, on_delete=models.CASCADE)
 
