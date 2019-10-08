@@ -6,5 +6,7 @@ user can add products of companies to his cart
 
 TODO
 1.Create cart complete functionality
+
 2. complete CRUD for cart
+
 3.Get signup error solved
