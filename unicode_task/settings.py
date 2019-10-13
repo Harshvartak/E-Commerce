@@ -62,7 +62,7 @@ ROOT_URLCONF = 'unicode_task.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates',],
+        'DIRS': ['unicode_task/templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -23,10 +23,10 @@ def AddProduct(request):
             if equest.POST['title'] and request.POST['description'] and  request.FILES['image']and  request.FILES['cost']:
                 form=ProductCreate()
                 new_product=Product
-                new_product.title=request.POST.['title']
-                new_product.description=request.POST.['description']
+                new_product.title=request.POST['title']
+                new_product.description=request.POST['description']
                 new_product.image=request.FILES['image']
-                new_product.cost=request.POST.['cost']
+                new_product.cost=request.POST['cost']
                 new_product.user=request.user
                 product.pub_date=timezone.datetime.now()
                 new_product.save()
@@ -45,7 +45,7 @@ def upvote(request, product_id):
 		return redirect('/products/'+str(product.id))
 
 
-class DetailHall(generic.DetailView):
+class DetailProduct(generic.DetailView):
     model = Product
     template_name = 'products/detail.html'
 
